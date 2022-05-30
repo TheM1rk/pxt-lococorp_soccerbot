@@ -1,18 +1,28 @@
 radio.onReceivedNumber(function (receivedNumber) {
-    while (receivedNumber != 0) {
-        if (receivedNumber == 1) {
-            maqueen.servoRun(maqueen.Servos.S2, 90)
-            basic.pause(150)
-        } else if (receivedNumber == 2) {
-            maqueen.servoRun(maqueen.Servos.S1, 40)
-            basic.pause(150)
-        } else if (receivedNumber == 3) {
-            maqueen.servoRun(maqueen.Servos.S2, 90)
-            maqueen.servoRun(maqueen.Servos.S1, 40)
-            basic.pause(200)
-        }
-        maqueen.servoRun(maqueen.Servos.S1, 80)
+    if (receivedNumber == 1 && !(chiuso)) {
+        maqueen.servoRun(maqueen.Servos.S2, 90)
+        basic.pause(150)
         maqueen.servoRun(maqueen.Servos.S2, 5)
+    } else if (receivedNumber == 2 && !(chiuso)) {
+        maqueen.servoRun(maqueen.Servos.S1, 40)
+        basic.pause(150)
+        maqueen.servoRun(maqueen.Servos.S1, 80)
+    } else if (receivedNumber == 3 && !(chiuso)) {
+        maqueen.servoRun(maqueen.Servos.S2, 90)
+        maqueen.servoRun(maqueen.Servos.S1, 40)
+        basic.pause(200)
+        maqueen.servoRun(maqueen.Servos.S2, 5)
+        maqueen.servoRun(maqueen.Servos.S1, 80)
+    } else if (receivedNumber == 4 && linea == 0) {
+        if (!(chiuso)) {
+            maqueen.servoRun(maqueen.Servos.S2, 60)
+            maqueen.servoRun(maqueen.Servos.S1, 60)
+            chiuso = true
+        } else {
+            maqueen.servoRun(maqueen.Servos.S2, 5)
+            maqueen.servoRun(maqueen.Servos.S1, 80)
+            chiuso = false
+        }
     }
 })
 radio.onReceivedString(function (receivedString) {
@@ -30,15 +40,31 @@ if (joystickX != 500) {
         velY = 0
     }
 })
+let blocked = false
+let cambiato = false
 let velY = 0
 let velX = 0
+let chiuso = false
+let linea = 0
 radio.setGroup(40)
 radio.setFrequencyBand(83)
 let XandY = ["500", "500"]
 let joystickY: number, joystickX: number
+linea = 1
+maqueen.servoRun(maqueen.Servos.S2, 5)
+maqueen.servoRun(maqueen.Servos.S1, 80)
 basic.forever(function () {
-    serial.writeLine("X =" + velX)
-    serial.writeLine("Y =" + velY)
+    pins.digitalWritePin(DigitalPin.P13, 1)
+    pins.digitalWritePin(DigitalPin.P14, 1)
+    if (pins.digitalReadPin(DigitalPin.P13) != 1 && pins.digitalReadPin(DigitalPin.P14) != 1 && !(cambiato)) {
+        cambiato = true
+        if (linea == 0) {
+            linea = 1
+            blocked = false
+        } else {
+            linea = 0
+        }
+    }
     if (velY >= 20) {
         if (velX > 0) {
             maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, Math.max(velY, velX) - Math.min(velY, velX))
@@ -72,4 +98,15 @@ basic.forever(function () {
     } else {
         maqueen.motorStop(maqueen.Motors.All)
     }
+    serial.writeLine("" + linea + "+" + blocked)
+    if (linea == 1 && !(blocked)) {
+        maqueen.servoRun(maqueen.Servos.S2, 5)
+        maqueen.servoRun(maqueen.Servos.S1, 80)
+        blocked = true
+        chiuso = false
+    }
+    serial.writeLine("" + (blocked))
+})
+loops.everyInterval(700, function () {
+    cambiato = false
 })
