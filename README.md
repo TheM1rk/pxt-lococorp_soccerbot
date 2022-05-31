@@ -4,7 +4,7 @@
 in order to use this code you need:
 - LocoCorp's Custom MaQueen
 - 2 Micro:Bit
-- 1 DFRobot for each MaQueen
+- 1 DFRobot Controller for each MaQueen
 - the LocoCorp's code for the SoccerBot/footBot controller
 - the MaQueen Extension for Micro:Bit
 
@@ -30,17 +30,18 @@ be sure that the `group` `main.ts` and copy/paste the code
 
 ![maQueen](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/maQueenExtension.png)
 
-4)download the `main.ts` and copy/paste the code
+4) download the `main.ts` and copy/paste the code
 
 5) ***have fun***
 
-## Modifica questo progetto ![Badge stato build](https://github.com/them1rk/lococorp-soccerbot/workflows/MakeCode/badge.svg)
+# HOW TO PLAY
 
-Per modificare questa repository in MakeCode.
+Let's take a look at how is the controller preset
 
-* apri [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* clicca su **Importa** quindi fai clic su **Importa INDIRIZZO**
-* incolla **https://github.com/them1rk/lococorp-soccerbot** e clicca importa
+![controller](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/controller.png)
+
+The Green, Red, Blue can be setted up as you please.
+*before making any changing to the code, be aware of the [Micro:Bit scheduler](https://makecode.microbit.org/device/reactive)
 
 ## Anteprima dei blocchi
 
