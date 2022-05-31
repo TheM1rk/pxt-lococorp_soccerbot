@@ -8,9 +8,9 @@ in order to use this code you need:
 - the LocoCorp's code for the SoccerBot/footBot controller
 - the MaQueen Extension for Micro:Bit
 
-## **_BEFORE USING_**
+## **_BEFORE USAGE_**
 be sure that the 'group'is set to the exact number as the controller's group. For best results it's recommended to differ the differents group by 10 (__E.G SoccerBot1&Controller1 have group 10 but SoccerBot2&Controller2 have group 20__ ) 
-![group](https://github.com/them1rk/lococorp -soccerbot/raw/master/.github/makecode/group.png) >view from the controller program
+![group](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/group.png) >view from the controller program
 ![group2](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/group2.png) >view from the soccerbot program
 
 > Apri questa pagina in [https://them1rk.github.io/lococorp-soccerbot/](https://them1rk.github.io/lococorp-soccerbot/)
