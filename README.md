@@ -1,4 +1,4 @@
-# LOCO-CORP FootBot/SoccerBot [Badge stato build](https://github.com/them1rk/lococorp-soccerbot/workflows/MakeCode/badge.svg)
+# LOCO-CORP FootBot/SoccerBot ![Badge stato build](https://github.com/them1rk/lococorp-soccerbot/workflows/MakeCode/badge.svg)
 
 ## What do you need
 in order to use this code you need:
@@ -31,6 +31,7 @@ be sure that the `group` `main.ts` and copy/paste the code
 ![maQueen](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/maQueenExtension.png)
 
 4)download the `main.ts` and copy/paste the code
+
 5) ***have fun***
 
 ## Modifica questo progetto ![Badge stato build](https://github.com/them1rk/lococorp-soccerbot/workflows/MakeCode/badge.svg)
