@@ -9,7 +9,8 @@ in order to use this code you need:
 - the MaQueen Extension for Micro:Bit
 
 ## **_BEFORE USAGE_**
-be sure that the 'group'is set to the exact number as the controller's group. For best results it's recommended to differ the differents group by 10 (__E.G SoccerBot1&Controller1 have group 10 but SoccerBot2&Controller2 have group 20__ ).
+be sure that the `group` `main.ts` and copy/paste the code
+5) ***have fun***is set to the exact number as the controller's group. For best results it's recommended to differ the differents group by 10 (__E.G SoccerBot1&Controller1 have group 10 but SoccerBot2&Controller2 have group 20__ ).
 
 ![group](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/group.png) 
 >view from the controller program
@@ -18,16 +19,15 @@ be sure that the 'group'is set to the exact number as the controller's group. Fo
 
 >view from the soccerbot program
 
-> Apri questa pagina in [https://them1rk.github.io/lococorp-soccerbot/](https://them1rk.github.io/lococorp-soccerbot/)
+## How to Install
 
-## Usa come Estensione
-
-Questa repository può essere aggiunta come una **estensione** in MakeCode.
-
-* apri [https://makecode.microbit.org/](https://makecode.microbit.org/)
-* clicca su **Nuovo Progetto**
-* fai clic su **Estensioni** nel menu della ruota dentata
-* cerca **https://github.com/them1rk/lococorp-soccerbot** ed importa
+1) Make a new Micro:Bit file
+2) Go under the Tab Advanced -> extensions
+![tab](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/extensionTab.png)
+3) Search the MaQueen Extension. And download the first one
+![maQueen](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/maQueenExtension.png)
+4)download the `main.ts` and copy/paste the code
+5) ***have fun***
 
 ## Modifica questo progetto ![Badge stato build](https://github.com/them1rk/lococorp-soccerbot/workflows/MakeCode/badge.svg)
 
