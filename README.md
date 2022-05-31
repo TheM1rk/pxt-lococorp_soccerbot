@@ -41,7 +41,8 @@ Let's take a look at how is the controller preset
 ![controller](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/controller.png)
 
 The Green, Red, Blue can be setted up as you please.
-*before making any changing to the code, be aware of the [Micro:Bit scheduler](https://makecode.microbit.org/device/reactive)
+
+*before making any changing to the code, be aware of the [Micro:Bit scheduler](https://makecode.microbit.org/device/reactive)*
 
 ## Anteprima dei blocchi
 
