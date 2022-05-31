@@ -25,8 +25,11 @@ be sure that the `group` `main.ts` and copy/paste the code
 2) Go under the Tab Advanced -> extensions
 
 ![tab](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/extensionTab.png)
+
 3) Search the MaQueen Extension. And download the first one
+
 ![maQueen](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/maQueenExtension.png)
+
 4)download the `main.ts` and copy/paste the code
 5) ***have fun***
 
