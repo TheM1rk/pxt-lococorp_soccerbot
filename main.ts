@@ -68,7 +68,7 @@ let velY = 0
 let velX = 0
 let closed = false
 let line = 0
-radio.setGroup(10)
+radio.setGroup(30)
 radio.setFrequencyBand(83)
 let XandY = ["500", "500"]
 let joystickY: number, joystickX: number
