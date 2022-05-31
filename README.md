@@ -1,3 +1,16 @@
+# LOCO-CORP FootBot/SoccerBot [Badge stato build](https://github.com/them1rk/lococorp-soccerbot/workflows/MakeCode/badge.svg)
+
+## What do you need
+in order to use this code you need:
+- LocoCorp's Custom MaQueen
+- 2 Micro:Bit
+- 1 DFRobot for each MaQueen
+- the LocoCorp's code for the SoccerBot/footBot controller
+- the MaQueen Extension for Micro:Bit
+
+## **_BEFORE USING_**
+be sure that the '[group]'(https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/blocks.png) is set to the exact number as the controller's group. For best results it's recommended to differ the differents group by 10 (__E.G SoccerBot1&Controller1 have group 10 but SoccerBot2&Controller2 have group 20__ ) 
+
 
 > Apri questa pagina in [https://them1rk.github.io/lococorp-soccerbot/](https://them1rk.github.io/lococorp-soccerbot/)
 
