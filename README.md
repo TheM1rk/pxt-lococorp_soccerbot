@@ -41,11 +41,16 @@ be sure that the `group` is set to the exact number as the controller's group. F
 
 The Green, Red, Blue can be setted up as you please.
 
-*before making any changing to the code, be aware of the [Micro:Bit scheduler](https://makecode.microbit.org/device/reactive)*
+*before making any changes to the code, be aware of the [Micro:Bit scheduler](https://makecode.microbit.org/device/reactive)*
 
 ### Play field and Rules
 
 ![playfield](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/fieldsAndRules.png)
+
+#### Rules (in case it's not readable in the image above)
+1) the Bots must start at the side of the fiels before the black line on the side of the goal
+2) at the beginning of the round, be sure that you cant grab in the non-grab area
+3) you can exploit the sensors beneath the robot in order to grab in the non-grab area during the match, but you can't score while holding the ball. this will result in a faul(1 min stop)
 
 ### Blocks preview
 ![Un'immagine renderizzata dei blocchi](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/blocks.png)
