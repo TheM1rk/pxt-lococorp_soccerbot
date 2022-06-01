@@ -35,13 +35,17 @@ be sure that the `group` is set to the exact number as the controller's group. F
 
 # HOW TO PLAY
 
-Let's take a look at how is the controller preset
+### Let's take a look at how is the controller preset
 
 ![controller](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/controller.png)
 
 The Green, Red, Blue can be setted up as you please.
 
 *before making any changing to the code, be aware of the [Micro:Bit scheduler](https://makecode.microbit.org/device/reactive)*
+
+### Play field and Rules
+
+![playfield](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/fieldsAndRules.png)
 
 ### Blocks preview
 ![Un'immagine renderizzata dei blocchi](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/blocks.png)
