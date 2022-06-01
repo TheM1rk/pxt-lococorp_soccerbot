@@ -54,8 +54,8 @@ The Green, Red, Blue can be setted up as you please.
 
 3) you can exploit the sensors beneath the robot in order to grab in the non-grab area during the match, but you can't score while holding the ball. this will result in a faul(1 min stop)
 
-#### _IN CASE YOU DONT WANT THE FIELD DIVIDED BY THE DIFFERENT AREAS
-##### delete the following
+#### _IN CASE YOU DONT WANT THE FIELD DIVIDED IN DIFFERENT AREAS_
+##### delete the following:
 
 ![delete1](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/delete1.png)
 
@@ -65,12 +65,14 @@ The Green, Red, Blue can be setted up as you please.
 
 ![delete3](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/delete4.png)
 
-##### transform the following
+##### and transform the following:
 
 this:
+
 ![transform1](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/transform.png)
 
 into this:
+
 ![transforminto1](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/transforminto.png)
 
 ### Blocks preview
