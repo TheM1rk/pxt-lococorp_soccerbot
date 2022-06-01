@@ -45,30 +45,17 @@ radio.onReceivedNumber(function (receivedNumber) {
 radio.onReceivedString(function (receivedString) {
     XandY = receivedString.split(" ", 2);
 joystickX = parseInt(XandY[0], 10);
-joystickY = parseInt(XandY[1].trim(), 10);
-// the second half is assigned to the Y value
-    if (joystickX != 500) {
-        // if the x value is 500 it means it's in the center.
-        // this if is used to convert it to the servo velocity
-        // only when we need the bot to move, so the program does not
-        // become heavy
-        velX = 510 / 1023 * joystickX - 255
-    } else {
-        velX = 0
-    }
-    if (joystickY != 500) {
-        velY = 510 / 1023 * joystickY - 255
-    } else {
-        velY = 0
-    }
+joystickY = parseInt(XandY[1], 10);
+rightW = 0, 707 * ((joystickX + joystickY - 1023) * (255 / 511));
+leftW = (0,707*((joystickX - joystickY)*(255/511))) * -1
 })
 let blocked = false
 let hasChanged = false
-let velY = 0
-let velX = 0
+let leftW = 0
 let closed = false
 let line = 0
-radio.setGroup(30)
+let rightW = 0
+radio.setGroup(20)
 radio.setFrequencyBand(83)
 let XandY = ["500", "500"]
 let joystickY: number, joystickX: number
@@ -97,39 +84,23 @@ basic.forever(function () {
             line = 0
         }
     }
-    // 20 is just a dead zone
-    if (velY >= 20) {
-        if (velX > 0) {
-            // the previous calculation has scaled values between 500 and 1023 to 0 and 255
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, Math.max(velY, velX) - Math.min(velY, velX))
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, velY)
-        } else if (velX < 0) {
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, Math.max(velY, velX * -1) - Math.min(velY, velX * -1))
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, velY)
-        } else {
-            maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CW, velY)
-        }
-    } else if (velY <= -20) {
-        if (velX > 0) {
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, Math.max(velY * -1, velX) - Math.min(velY * -1, velX))
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, velY * -1)
-        } else if (velX < 0) {
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, Math.max(velY * -1, velX * -1) - Math.min(velY * -1, velX * -1))
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, velY * -1)
-        } else {
-            maqueen.motorRun(maqueen.Motors.All, maqueen.Dir.CCW, velY * -1)
-        }
-    } else if (velX != 0 && velY > -20 && velY < 20) {
-        if (velX > 0) {
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, velX / 2)
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, velX / 2)
-        } else if (velX < 0) {
-            maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, velX * -1 / 2)
-            maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, velX * -1 / 2)
-        } else {
-            maqueen.motorStop(maqueen.Motors.All)
-        }
-    } else {
+    if (rightW > 0 && leftW > 0) {
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, rightW)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, leftW)
+    }
+    if (rightW < 0 && leftW < 0) {
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, rightW * -1)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, leftW * -1)
+    }
+    if (rightW < 0 && leftW > 0) {
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CCW, rightW * -1)
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CW, leftW)
+    }
+    if (leftW < 0 && rightW > 0) {
+        maqueen.motorRun(maqueen.Motors.M1, maqueen.Dir.CCW, leftW * -1)
+        maqueen.motorRun(maqueen.Motors.M2, maqueen.Dir.CW, rightW)
+    }
+    if (leftW == 0 && rightW == 0) {
         maqueen.motorStop(maqueen.Motors.All)
     }
     if (line == 1 && !(blocked)) {
@@ -138,5 +109,6 @@ basic.forever(function () {
         blocked = true
         closed = false
     }
-    serial.writeLine("" + (blocked))
+    serial.writeLine("" + (leftW))
+    serial.writeLine("" + (rightW))
 })
