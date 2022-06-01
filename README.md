@@ -48,7 +48,7 @@ The Green, Red, Blue can be setted up as you please.
 ![playfield](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/fieldsAndRules.png)
 
 #### Rules (in case it's not readable in the image above)
-1) the Bots must start at the side of the fiels before the black line on the side of the goal
+1) the Bots must start at the side of the field before the black line on the side of the goal
 
 2) at the beginning of the round, be sure that you cant grab in the non-grab area
 
