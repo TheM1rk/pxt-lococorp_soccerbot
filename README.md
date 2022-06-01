@@ -43,14 +43,10 @@ The Green, Red, Blue can be setted up as you please.
 
 *before making any changing to the code, be aware of the [Micro:Bit scheduler](https://makecode.microbit.org/device/reactive)*
 
-## Anteprima dei blocchi
-
-Questa immagine mostra il codice blocchi dall'ultima conferma in master.
-Quest'immagine potrebbe impiegare qualche minuto per l'aggiornamento.
-
+### Blocks preview
 ![Un'immagine renderizzata dei blocchi](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/blocks.png)
 
-#### Metadati (usati per la ricerca, il rendering)
+#### Metadata
 
 * for PXT/microbit
 <script src="https://makecode.com/gh-pages-embed.js"></script><script>makeCodeRender("{{ site.makecode.home_url }}", "{{ site.github.owner_name }}/{{ site.github.repository_name }}");</script>
