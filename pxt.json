@@ -1,5 +1,5 @@
 {
-    "name": "locoCorp-SoccerBot",
+    "name": "pxt-locoCorp-SoccerBot",
     "description": "",
     "dependencies": {
         "core": "*",
