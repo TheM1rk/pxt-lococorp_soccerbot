@@ -4,7 +4,7 @@
 in order to use this code you need:
 - LocoCorp's Custom MaQueen
 - 2 Micro:Bit
-- 1 DFRobot Controller for each MaQueen
+- 1 DFRobot Controller for each MaQueen [with the code](https://them1rk.github.io/lococorp-controllersoccerbot/)
 - the LocoCorp's code for the SoccerBot/footBot controller
 - the MaQueen Extension for Micro:Bit
 
@@ -64,6 +64,7 @@ The Green, Red, Blue can be setted up as you please.
 ![delete3](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/delete3.png)
 
 ![delete3](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/delete4.png)
+
 
 ##### and transform the following:
 
