@@ -1,5 +1,13 @@
 # LOCO-CORP FootBot/SoccerBot ![Badge stato build](https://github.com/them1rk/lococorp-soccerbot/workflows/MakeCode/badge.svg)
 
+
+![Robots](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/robotsPNG)
+![Robots+Controller](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/robots+controllerPNG)
+![Controller](https://github.com/them1rk/lococorp-soccerbot/raw/master/.github/makecode/controllerPNG)
+
+
+
+
 ## What do you need
 in order to use this code you need:
 - LocoCorp's Custom MaQueen
