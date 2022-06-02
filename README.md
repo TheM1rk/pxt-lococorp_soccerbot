@@ -4,7 +4,7 @@
 in order to use this code you need:
 - LocoCorp's Custom MaQueen
 - 2 Micro:Bit
-- 1 DFRobot Controller for each MaQueen [with the code](https://them1rk.github.io/lococorp-controllersoccerbot/)
+- 1 DFRobot Controller for each MaQueen [with it's code](https://them1rk.github.io/lococorp-controllersoccerbot/)
 - the LocoCorp's code for the SoccerBot/footBot controller
 - the MaQueen Extension for Micro:Bit
 
